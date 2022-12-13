@@ -7,6 +7,11 @@ const Card = styled.div`
   font-size: 1.5rem;
   text-align: center;
   background-color: #ededed;
+
+  @media screen and (max-width: 767px) {
+    padding: 0.6rem 0;
+    font-size: 1.2rem;
+  }
 `;
 
 const DateIndicator = () => {

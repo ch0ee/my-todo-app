@@ -12,6 +12,11 @@ const Section = styled.div`
   max-width: 95%;
   border-radius: 12px;
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+
+  @media screen and (max-width: 767px) {
+    padding: 1rem;
+    margin: 1.4rem auto;
+  }
 `;
 
 const Todos = () => {

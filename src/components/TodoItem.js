@@ -10,23 +10,37 @@ const Card = styled.div`
   justify-content: space-between;
   gap: 1.6rem;
 
-  > h2 {
+  h2 {
     flex: 2 0 0;
   }
 
-  > button {
+  button {
     flex: 1 0 0;
     background: none;
     border: none;
     max-width: max-content;
   }
-  > button img {
+  button img {
     transform: scale(0.9);
     transition: all 0.3s ease-in;
   }
-  > button:hover img {
+  button:hover img {
     transform: scale(1.1);
     transition: all 0.3s ease-in;
+  }
+
+  @media screen and (max-width: 767px) {
+    padding: 1rem;
+    gap: 0.2rem;
+    font-size: 0.8rem;
+
+    button img {
+      max-width: 24px;
+      transform: none;
+    }
+    button:hover img {
+      transform: none;
+    }
   }
 `;
 

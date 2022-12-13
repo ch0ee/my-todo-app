@@ -43,6 +43,26 @@ const Section = styled.div`
     background-color: #c7fda6;
     transition: all 0.2s ease-in;
   }
+
+  @media screen and (max-width: 767px) {
+    padding: 1.3rem;
+    margin: 1.4rem auto;
+
+    form {
+      gap: 1.3rem;
+    }
+
+    input[type='text'] {
+      padding: 1rem;
+      font-family: 'Poor Story', cursive;
+      font-size: 1rem;
+    }
+
+    button {
+      font-size: 1rem;
+      padding: 0.8rem;
+    }
+  }
 `;
 
 const CreateTodo = ({ onSaveTodoData, isVisible }) => {

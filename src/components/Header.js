@@ -38,6 +38,28 @@ const HeaderSection = styled.div`
     transform: scale(0.85);
     transition: all 0.3s ease-in;
   }
+
+  @media screen and (max-width: 767px) {
+    padding: 0 1rem;
+    margin: 1.4rem auto;
+    gap: 0.2rem;
+
+    h1 {
+      font-size: 1.5rem;
+      gap: 0.6rem;
+    }
+
+    img {
+      max-width: 36px;
+    }
+
+    button img {
+      transform: none;
+    }
+    button:hover img {
+      transform: none;
+    }
+  }
 `;
 
 const Header = ({ onShowAddNewTodo, isVisible }) => {
@@ -55,6 +77,7 @@ const Header = ({ onShowAddNewTodo, isVisible }) => {
         오늘의 할 일
       </h1>
       <button onClick={addBtnClickHandler}>
+        {/* 오늘의할일 일때 */}
         {isVisible ? (
           <img
             src='images/close.png'
@@ -68,6 +91,8 @@ const Header = ({ onShowAddNewTodo, isVisible }) => {
             alt='더하기 아이콘'
           />
         )}
+        {/* 어제의한일일 때 - 달력보기 */}
+        {/* 달력,앱정보일때 버튼 없음 */}
       </button>
       <button onClick={menuBtnClickHandler}>
         <img src='images/menu.png' title='메뉴 더 보기' alt='메뉴 아이콘' />
