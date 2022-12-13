@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import DateIndicator from './DateIndicator';
 import TodoList from './TodoList';
+import Loading from './Loading';
 import styled from 'styled-components';
 
 const Section = styled.div`
@@ -43,7 +44,7 @@ const Todos = () => {
     <Section className='todos'>
       <DateIndicator />
       {error && <div>{error}</div>}
-      {isPending && <div>Loading...</div>}
+      {isPending && <Loading />}
       {todos && <TodoList todos={todos} />}
     </Section>
   );

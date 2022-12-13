@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 
 const Section = styled.div`
+  display: ${(props) => (props.isVisible ? 'block' : 'none')};
   padding: 1.6rem;
   background-color: rgb(255, 255, 255);
   margin: 2rem auto;
@@ -44,7 +45,7 @@ const Section = styled.div`
   }
 `;
 
-const CreateTodo = ({ onSaveTodoData }) => {
+const CreateTodo = ({ onSaveTodoData, isVisible }) => {
   const [inputValue, setInputValue] = useState('');
   const inputValueChangeHandler = (event) => {
     setInputValue(event.target.value);
@@ -63,7 +64,7 @@ const CreateTodo = ({ onSaveTodoData }) => {
   };
 
   return (
-    <Section className='create-todo'>
+    <Section className='create-todo' isVisible={isVisible}>
       <form onSubmit={submitHandler}>
         <input
           type='text'
